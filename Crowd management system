@@ -1,0 +1,81 @@
+import java.util.Scanner;
+
+public class CrowdManagementSystem {
+
+    static int currentCount = 0;
+    static int maxCapacity;
+
+    // Method for people entering
+    public static void addPeople(int number) {
+        currentCount += number;
+        if (currentCount > maxCapacity) {
+            System.out.println("⚠ WARNING: Crowd limit exceeded!");
+        } else {
+            System.out.println("People added successfully.");
+        }
+    }
+
+    // Method for people leaving
+    public static void removePeople(int number) {
+        if (number > currentCount) {
+            System.out.println("Error: Not enough people inside.");
+        } else {
+            currentCount -= number;
+            System.out.println("People removed successfully.");
+        }
+    }
+
+    // Method to display status
+    public static void displayStatus() {
+        System.out.println("Current Crowd Count: " + currentCount);
+        System.out.println("Maximum Capacity: " + maxCapacity);
+    }
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        int choice;
+
+        System.out.print("Enter maximum crowd capacity: ");
+        maxCapacity = sc.nextInt();
+
+        do {
+            System.out.println("\n--- Crowd Management System ---");
+            System.out.println("1. Add People");
+            System.out.println("2. Remove People");
+            System.out.println("3. Display Crowd Status");
+            System.out.println("4. Exit");
+            System.out.print("Enter your choice: ");
+
+            choice = sc.nextInt();
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter number of people entering: ");
+                    int enter = sc.nextInt();
+                    addPeople(enter);
+                    break;
+
+                case 2:
+                    System.out.print("Enter number of people leaving: ");
+                    int leave = sc.nextInt();
+                    removePeople(leave);
+                    break;
+
+                case 3:
+                    displayStatus();
+                    break;
+
+                case 4:
+                    System.out.println("Exiting system. Stay safe!");
+                    break;
+
+                default:
+                    System.out.println("Invalid choice. Try again.");
+            }
+
+        } while (choice != 4);
+
+        sc.close();
+    }
+}
