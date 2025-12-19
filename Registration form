@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration & Contact Form</title>
+</head>
+<body>
+
+    <h1>Registration Form</h1>
+    <hr>
+
+    <form action="#" method="post">
+
+        <!-- Personal Details -->
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label>Full Name:</label><br>
+            <input type="text" name="fullname" placeholder="Enter your name" required><br><br>
+
+            <label>Email Address:</label><br>
+            <input type="email" name="email" placeholder="Enter your email" required><br><br>
+
+            <label>Password:</label><br>
+            <input type="password" name="password" required><br><br>
+
+            <label>Gender:</label><br>
+            <input type="radio" name="gender" value="Male"> Male<br>
+            <input type="radio" name="gender" value="Female"> Female<br>
+            <input type="radio" name="gender" value="Other"> Other<br><br>
+
+            <label>Date of Birth:</label><br>
+            <input type="date" name="dob"><br><br>
+
+        </fieldset>
+
+        <br>
+
+        <!-- Skills -->
+        <fieldset>
+            <legend>Skills</legend>
+
+            <input type="checkbox" name="skills" value="HTML"> HTML<br>
+            <input type="checkbox" name="skills" value="CSS"> CSS<br>
+            <input type="checkbox" name="skills" value="JavaScript"> JavaScript<br>
+            <input type="checkbox" name="skills" value="Python"> Python<br>
+
+        </fieldset>
+
+        <br>
+
+        <!-- Course Selection -->
+        <fieldset>
+            <legend>Course Selection</legend>
+
+            <label>Select Course:</label><br>
+            <select name="course">
+                <option value="">--Select--</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Data Science">Data Science</option>
+                <option value="AI & ML">AI & ML</option>
+                <option value="Cyber Security">Cyber Security</option>
+            </select>
+
+        </fieldset>
+
+        <br>
+
+        <!-- Contact Section -->
+        <fieldset>
+            <legend>Contact Us</legend>
+
+            <label>Phone Number:</label><br>
+            <input type="tel" name="phone" placeholder="Enter phone number"><br><br>
+
+            <label>Your Message:</label><br>
+            <textarea name="message" rows="5" cols="30" placeholder="Write your message"></textarea>
+
+        </fieldset>
+
+        <br>
+
+        <!-- Buttons -->
+        <input type="submit" value="Register">
+        <input type="reset" value="Clear">
+
+    </form>
+
+    <hr>
+    <footer>
+        <p>© 2025 Registration Form Project | HTML Only</p>
+    </footer>
+
+</body>
+</html>
